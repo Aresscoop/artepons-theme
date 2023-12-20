@@ -32,12 +32,12 @@ h6,
 }
 
 ::-moz-selection {
-  background: rgba(47, 85, 212, 0.9);
+  background: rgba(162, 121, 165, 0.9);
   color: #ffffff;
 }
 
 ::selection {
-  background: rgba(47, 85, 212, 0.9);
+  background: rgba(162, 121, 165, 0.9);
   color: #ffffff;
 }
 
@@ -5450,7 +5450,7 @@ html[dir="rtl"] .tns-visually-hidden {
     left bottom,
     from(rgba(0, 0, 0, 0)),
     color-stop(25%, rgba(0, 0, 0, 0.25)),
-    color-stop(50%, rgba(0, 0, 0, 0.5)),
+    color-stop(50%, rgba(0, 0, 0, 0.4)),
     color-stop(75%, rgba(0, 0, 0, 0.75)),
     to(black)
   );
@@ -5458,7 +5458,7 @@ html[dir="rtl"] .tns-visually-hidden {
     to bottom,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.25) 25%,
-    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.4) 50%,
     rgba(0, 0, 0, 0.75) 75%,
     black 100%
   );
@@ -6061,7 +6061,7 @@ html[dir="rtl"] .tns-visually-hidden {
 }
 
 .bg-overlay {
-  background-color: rgba(60, 72, 88, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   right: 0;
@@ -6131,7 +6131,7 @@ html[dir="rtl"] .tns-visually-hidden {
     right top,
     from(black),
     color-stop(25%, black),
-    color-stop(50%, rgba(0, 0, 0, 0.5)),
+    color-stop(50%, rgba(0, 0, 0, 0.4)),
     color-stop(75%, rgba(0, 0, 0, 0.25)),
     to(rgba(0, 0, 0, 0))
   );
@@ -6139,7 +6139,7 @@ html[dir="rtl"] .tns-visually-hidden {
     to right,
     black 0%,
     black 25%,
-    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.4) 50%,
     rgba(0, 0, 0, 0.25) 75%,
     rgba(0, 0, 0, 0) 100%
   );
@@ -6152,7 +6152,7 @@ html[dir="rtl"] .tns-visually-hidden {
     left bottom,
     from(rgba(0, 0, 0, 0)),
     color-stop(25%, rgba(0, 0, 0, 0.25)),
-    color-stop(50%, rgba(0, 0, 0, 0.5)),
+    color-stop(50%, rgba(0, 0, 0, 0.4)),
     color-stop(75%, rgba(0, 0, 0, 0.75)),
     to(black)
   );
@@ -6160,7 +6160,7 @@ html[dir="rtl"] .tns-visually-hidden {
     to bottom,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.25) 25%,
-    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.4) 50%,
     rgba(0, 0, 0, 0.75) 75%,
     black 100%
   );
@@ -6189,14 +6189,14 @@ html[dir="rtl"] .tns-visually-hidden {
     left top,
     left bottom,
     from(rgba(0, 0, 0, 0)),
-    color-stop(25%, rgba(0, 0, 0, 0.5)),
+    color-stop(25%, rgba(0, 0, 0, 0.4)),
     color-stop(50%, rgba(0, 0, 0, 0.75)),
     to(black)
   );
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.5) 25%,
+    rgba(0, 0, 0, 0.4) 25%,
     rgba(0, 0, 0, 0.75) 50%,
     black 100%
   );
@@ -6207,14 +6207,14 @@ html[dir="rtl"] .tns-visually-hidden {
     linear,
     left top,
     left bottom,
-    from(rgba(0, 0, 0, 0.5)),
+    from(rgba(0, 0, 0, 0.4)),
     color-stop(25%, rgba(0, 0, 0, 0.6)),
     color-stop(50%, rgba(0, 0, 0, 0.7)),
     to(rgba(0, 0, 0, 0.8))
   );
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.4) 0%,
     rgba(0, 0, 0, 0.6) 25%,
     rgba(0, 0, 0, 0.7) 50%,
     rgba(0, 0, 0, 0.8) 100%

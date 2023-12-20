@@ -32,12 +32,12 @@ h6,
 }
 
 ::-moz-selection {
-  background: rgba(47, 85, 212, 0.9);
+  background: rgba(162, 121, 165, 0.9);
   color: #ffffff;
 }
 
 ::selection {
-  background: rgba(47, 85, 212, 0.9);
+  background: rgba(162, 121, 165, 0.9);
   color: #ffffff;
 }
 
