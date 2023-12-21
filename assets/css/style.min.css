@@ -3546,6 +3546,14 @@ p {
     height: 80vh !important;
   }
 }
+.bg-half-500 {
+  padding: 20% 0;
+  background-size: cover !important;
+  -ms-flex-item-align: center;
+  align-self: center;
+  position: relative !important;
+  background-position: center center;
+}
 .bg-half-260 {
   padding: 260px 0;
   background-size: cover !important;

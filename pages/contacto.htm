@@ -4,11 +4,10 @@ url = "/contacto"
 ==
 
 <!-- Hero Start -->
-<section class="bg-half-170 vh-100 d-flex align-items-center" style="background: url('{{ 'assets/images/principal/contacto.png' | theme}}') center center;">
+<!-- <section class="bg-half-170 vh-100 d-flex align-items-center section" style="background: url('{{ 'assets/images/principal/contacto.png' | theme}}') center center;">
     <div class="bg-overlay"></div>
     <div class="container" style="padding-bottom: 150px; padding-top: 150px;">
         <div class="row align-items-center">
-
             <div class="col-lg-5 col-md-6 pt-2 pt-sm-0 order-2 order-md-1">
                 <div class="card shadow rounded border-0">
                     <div class="card-body">
@@ -36,7 +35,7 @@ url = "/contacto"
                                                 <input name="email" id="email" type="email" class="form-control ps-5" placeholder="Correo:">
                                             </div>
                                         </div> 
-                                    </div><!--end col-->
+                                    </div>
 
                                     <div class="col-12">
                                         <div class="mb-3">
@@ -46,7 +45,7 @@ url = "/contacto"
                                                 <input name="subject" id="subject" class="form-control ps-5" placeholder="Asunto:">
                                             </div>
                                         </div>
-                                    </div><!--end col-->
+                                    </div>
 
                                     <div class="col-12">
                                         <div class="mb-3">
@@ -68,13 +67,13 @@ url = "/contacto"
                                         <div class="d-grid">
                                             <button type="submit" id="submit" name="send" class="btn btn-primary">Envíar Mensaje</button>
                                         </div>
-                                    </div><!--end col-->
-                                </div><!--end row-->
+                                    </div>
+                                </div>
                             </form>
-                        </div><!--end custom-form-->
+                        </div>
                     </div>
                 </div>
-            </div><!--end col-->
+            </div>
 
             <div class="col-lg-1 col-md-0 pt-2 pt-sm-0 order-2 order-md-1"></div>
 
@@ -99,7 +98,7 @@ url = "/contacto"
                         </div>
                         <div class="flex-1 content">
                             <h5 class="title fw-bold mb-0" style="color: #a279a5;">Email</h5>
-                            <a href="mailto:artepons1111@gmail.com" style="color: #ffffff;">artepons1111@gmail.com</a>
+                            <a href="mailto:hola@artepons.es" style="color: #ffffff;">hola@artepons.es</a>
                         </div>
                     </div>
                     
@@ -115,13 +114,125 @@ url = "/contacto"
                     <ul class="list-unstyled social-icon mb-0 mt-4">
                         <li class="list-inline-item mb-0"><a href="https://www.facebook.com/people/artepons/100083885595195/" target="_blank" class="rounded"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>
                                 <li class="list-inline-item mb-0"><a href="https://wa.me/34657613738" target="_blank" class="rounded"><i class="uil uil-whatsapp align-middle" title="whatsapp"></i></a></li>
-                    </ul><!--end icon-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- Hero End -->
+
+<section class="bg-half-500 pt-5" style="background: url('{{ 'assets/images/principal/contacto.png' | theme}}') center center;">
+    <div class="bg-overlay"></div>
+    <div class="container mt-100 mt-60" style="margin-top: 15%;">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0 order-2 order-md-1">
+                <div class="card custom-form rounded border-0 shadow p-4">
+                    <form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
+                        <p id="error-msg" class="mb-0"></p>
+                        <div id="simple-msg"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Nombre <span class="text-danger">*</span></label>
+                                    <div class="form-icon position-relative">
+                                        <i data-feather="user" class="fea icon-sm icons"></i>
+                                        <input name="name" id="name" type="text" class="form-control ps-5" placeholder="Nombre:">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Email <span class="text-danger">*</span></label>
+                                    <div class="form-icon position-relative">
+                                        <i data-feather="mail" class="fea icon-sm icons"></i>
+                                        <input name="email" id="email" type="email" class="form-control ps-5" placeholder="Email:">
+                                    </div>
+                                </div> 
+                            </div><!--end col-->
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Asunto</label>
+                                    <div class="form-icon position-relative">
+                                        <i data-feather="book" class="fea icon-sm icons"></i>
+                                        <input name="subject" id="subject" class="form-control ps-5" placeholder="Asunto:">
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Mensaje <span class="text-danger">*</span></label>
+                                    <div class="form-icon position-relative">
+                                        <i data-feather="message-circle" class="fea icon-sm icons clearfix"></i>
+                                        <textarea name="comments" id="comments" rows="4" class="form-control ps-5" placeholder="Escribir mensaje..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <form method="post" action="/send/">
+                                    <input type="checkbox" name="username-enabled"><span style="font-size: 14px;"> He leído y acepto el <a href="/aviso-legal">Aviso Legal</a> y la <a href="/politica-privacidad">Política de Privacidad</a>.</sapn>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <button type="submit" id="submit" name="send" class="btn btn-primary">Envíar Mensaje</button>
+                                </div>
+                            </div><!--end col-->
+                        </div><!--end row-->
+                    </form>
+                </div><!--end custom-form-->
+            </div><!--end col-->
+
+            <div class="col-lg-7 col-md-6 order-1 order-md-2">
+                <div class="title-heading ms-lg-4">
+                    <h1 class="heading" style="color: white;">Contacta con <span style="color: #a279a5;">nosotros!</span></h1>
+                    <p class="text-white" style="font-size: 20px;">Si tienes alguna duda sobre qué servicio sé adapta mejor a tus necesidades consúltanos, estaremos encantados de atenderte!</p>
+                    <div class="d-flex contact-detail align-items-center mt-3">
+                        <div class="icon">
+                            <i data-feather="phone" class="fea icon-m-md text-white me-3"></i>
+                        </div>
+                        <div class="flex-1 content">
+                            <h5 class="title fw-bold mb-0" style="color: #a279a5;">Teléfono</h5>
+                            <a href="tel:+34657613738" style="color: #ffffff;">+34 657 613 738</a><br>
+                            <a href="tel:+34610754268" style="color: #ffffff;">+34 610 754 268</a>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex contact-detail align-items-center mt-3">
+                        <div class="icon">
+                            <i data-feather="phone" class="fea icon-m-md text-white me-3"></i>
+                        </div>
+                        <div class="flex-1 content">
+                            <h5 class="title fw-bold mb-0" style="color: #a279a5;">Email</h5>
+                            <a href="mailto:hola@artepons.es" style="color: #ffffff;">hola@artepons.es</a>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex contact-detail align-items-center mt-3">
+                        <div class="icon">
+                            <i data-feather="mail" class="fea icon-m-md text-white me-3"></i>
+                        </div>
+                        <div class="flex-1 content">
+                            <h5 class="title fw-bold mb-0" style="color: #a279a5;">Dirección</h5>
+                            <a href="https://maps.app.goo.gl/i6sUJXSWftiquxbU7" data-type="iframe" class="video-play-icon lightbox" style="color: #ffffff;">Ver en Google Maps</a>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled social-icon mb-0 mt-4">
+                        <li class="list-inline-item mb-0"><a href="https://www.facebook.com/people/artepons/100083885595195/" target="_blank" class="rounded"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>
+                        <li class="list-inline-item mb-0"><a href="https://wa.me/34657613738" target="_blank" class="rounded"><i class="uil uil-whatsapp align-middle" title="whatsapp"></i></a></li>
+                    </ul>
                 </div>
             </div><!--end col-->
         </div><!--end row-->
-    </div><!--end container--> 
+    </div><!--end container-->
 </section><!--end section-->
-<!-- Hero End -->
 
 <script src="https://www.google.com/recaptcha/api.js?render={{recaptcha_token}}"></script>
 <script>
